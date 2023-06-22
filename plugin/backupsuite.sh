@@ -382,6 +382,9 @@ else
 	elif [ $SEARCH = "h7" ] ; then
 		dd if=/dev/mmcblk0p2 of=$WORKDIR/$KERNELNAME
 		log "Kernel resides on /dev/mmcblk0p2"
+	elif [ $SEARCH = "osmio4kplus" -o $SEARCH = "osmio4k" ] ; then
+		dd if=/dev/mmcblk1p2 of=$WORKDIR/$KERNELNAME
+		log "Kernel resides on /dev/mmcblk0p2"
 	elif [ $SEARCH = "sf4008" -o $SEARCH = "et11000" ] ; then
 		dd if=/dev/mmcblk0p3 of=$WORKDIR/$KERNELNAME
 		log "Kernel resides on /dev/mmcblk0p3"
